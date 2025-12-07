@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/backend/images/favicon.ico">
+    <link rel="stylesheet" href="/frontend/css/meeting.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="emoji">☕</span>
+                <p>Ada<span id="ence">ence</span></p>
+            </div>
+            <ul class="menu">
+                <li><a href="/frontend/index.html"><i data-lucide="home"></i>Accueil</a></li>
+                <li><a href="/frontend/pages/recherche.html"><i data-lucide="accessibility"></i>Je rends visite</a></li>
+                <li><a href="#"><i data-lucide="book-open"></i>Guide du partage</a></li>
+                <li><a href="/frontend/pages/volantaire.html"><i data-lucide="hand-helping"></i>Devenir bénévole</a>
+                </li>
+            </ul>
+            <div>
+                <a href="#" id="donate-btn">Faire un don<i data-lucide="heart-handshake"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="form-wrapper">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-title">Programmez votre moment</h2>
+                <p class="form-subtitle">
+                    Remplissez ce formulaire afin de programmer votre prochain rendez-vous avec un aîné.
+                </p>
+
+                <!-- Formulaire -->
+                <form id="meetingForm">
+
+                    <!-- Récap du senior (rempli dynamiquement en JS) -->
+                    <div class="form-section ">
+                        <div class="form-items">
+                            <h3 id="seniorName"></h3>
+                            <p><strong>Activité :</strong> <span id="seniorActivity"></span></p>
+                            <p><strong>Ville :</strong> <span id="seniorCity"></span></p>
+                        </div>
+                    </div>
+
+                    <!-- Date, heure, lieu -->
+                    <div class="form-section">
+                        <div class="form-items">
+                            <label for="meeting_date" class="required-section">Date</label>
+                            <input type="date" id="meeting_date" required>
+                        </div>
+
+                        <div class="form-items">
+                            <label for="meeting_time" class="required-section">Heure</label>
+                            <input type="time" id="meeting_time" required>
+                        </div>
+
+                        <div class="form-items">
+                            <label for="meeting_location" class="required-section">Lieu</label>
+                            <input type="text" id="meeting_location" placeholder="Ex : Café du Parc, Lyon..." required>
+                        </div>
+                    </div>
+
+                    <!-- Informations du bénévole -->
+                    <h3 class="form-subtitle">Vos informations</h3>
+
+                    <div class="form-section">
+                        <div class="form-items">
+                            <label for="vol_firstname" class="required-section">Prénom</label>
+                            <input type="text" id="vol_firstname" required placeholder="Votre prénom">
+                        </div>
+
+                        <div class="form-items">
+                            <label for="vol_lastname" class="required-section">Nom</label>
+                            <input type="text" id="vol_lastname" required placeholder="Votre nom">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="form-items">
+                            <label for="vol_email" class="required-section">Email</label>
+                            <input type="email" id="vol_email" required placeholder="Votre email">
+                        </div>
+
+                        <div class="form-items">
+                            <label for="vol_city" class="required-section">Ville</label>
+                            <input type="text" id="vol_city" required placeholder="Votre ville">
+                        </div>
+
+                        <div class="form-items">
+                            <label for="vol_zipcode" class="required-section">Code postal</label>
+                            <input type="text" id="vol_zipcode" required placeholder="Code postal">
+                        </div>
+                    </div>
+
+                    <!-- Bouton d'envoi -->
+                    <div class="button-send">
+                        <button type="submit" class="btn form-btn">Programmer le rendez-vous</button>
+                        <p id="status"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h3>Adaence</h3>
+                    <p>Notre mission est de recréer du lien avec les personnes âgées isolées, en leur offrant des
+                        moments de
+                        partage, d'écoute et de présence.</p>
+                    <div class="social-media">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                        <a href="#"><i data-lucide="twitch"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Informations utiles</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Liste des activités</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>116 Rue du Faubourg Saint-Martin<br>75010 Paris, France</p>
+                    <p>Email: contact@adaence.fr</p>
+                    <p>Tél: +33 1 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <hr>
+                <p>© 2025 Adaence. Tous droits réservés.</p>
+                <p class="note">Ce site a été développé dans le cadre d’un projet pour ADA Tech School.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

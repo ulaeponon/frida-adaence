@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaence – Recherche</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="/frontend/script/recherche.js" defer></script>
+  <link rel="stylesheet" href="/frontend/css/recherche.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <span class="emoji">☕</span>
+        <p>Ada<span id="ence">ence</span></p>
+      </div>
+      <ul class="menu">
+        <li><a href="/frontend/index.html"><i data-lucide="home"></i>Accueil</a></li>
+        <li><a href="/frontend/pages/recherche.html"><i data-lucide="accessibility"></i>Je rends visite</a></li>
+        <li><a href="#"><i data-lucide="book-open"></i>Guide du partage</a></li>
+        <li><a href="/frontend/pages/volantaire.html"><i data-lucide="hand-helping"></i>Devenir bénévole</a></li>
+      </ul>
+      <div>
+        <a href="#" id="donate-btn">Faire un don<i data-lucide="heart-handshake"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    
+    <section class="searchBar-container">
+      <form class="searchForm">
+        <div class="form-items">
+          <label for="momentShared">Moment à partager</label>
+          <select id="momentShared" name="momentShared">
+            <option value="">Tous les moments possibles</option>
+            <option value="repas">Un repas</option>
+            <option value="cafe">Un café/thé</option>
+            <option value="culture">Une sortie culturelle</option>
+            <option value="balade">Une balade</option>
+            <option value="autre">Autre activité</option>
+          </select>
+        </div>
+        <div class="form-items">
+          <label for="localisation">Localisation</label>
+          <input type="text" id="localisation" name="localisation" placeholder="Votre ville">
+        </div>
+
+        <button type="submit">Rechercher 🔍</button>
+      </form>
+
+      <p class="results-count"></p>
+      <a href="#" class="link-filter">Réinitialiser les filtres</a>
+    </section>
+
+    <!-- PROFILS -->
+    <section class="profiles-grid"></section>
+
+    <!-- PAGINATION -->
+    <nav class="pagination" aria-label="Pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">Suivant »</a>
+    </nav>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h3>Adaence</h3>
+          <p>Notre mission est de recréer du lien avec les personnes âgées isolées, en leur offrant des moments de
+            partage, d'écoute et de présence.</p>
+          <div class="social-media">
+            <a href="#"><i data-lucide="facebook"></i></a>
+            <a href="#"><i data-lucide="instagram"></i></a>
+            <a href="#"><i data-lucide="linkedin"></i></a>
+            <a href="#"><i data-lucide="twitch"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Informations utiles</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Liste des activités</a></li>
+            <li><a href="#">Nous contacter</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <p>116 Rue du Faubourg Saint-Martin<br>75010 Paris, France</p>
+          <p>Email: contact@adaence.fr</p>
+          <p>Tél: +33 1 23 45 67 89</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <hr>
+        <p>© 2025 Adaence. Tous droits réservés.</p>
+        <p class="note">Ce site a été développé dans le cadre d’un projet pour ADA Tech School.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
