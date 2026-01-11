@@ -62,7 +62,7 @@ function renderProfils(profils) {
     <div class="searchDetails">
       <span>${profil.age} ans • ${profil.city}</span>
     </div>
-     <a href="#" class="btn btn-primary">Programmer un moment</a>
+     <a href="/frontend/pages/meeting.html?seniorId=${profil.id}" class="btn btn-primary">Programmer un moment</a>
   </div>
 `;
 

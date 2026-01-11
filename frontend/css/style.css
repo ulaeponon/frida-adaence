@@ -115,7 +115,7 @@ body {
     transform: translateY(-2px);
 }
 .heroPic {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(/frontend/images/fiqih-pradana-qm-SgY--sVg-unsplash.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(/images/fiqih-pradana-qm-SgY--sVg-unsplash.jpg);
     background-size: cover;
     background-position: center;
     color: white;
