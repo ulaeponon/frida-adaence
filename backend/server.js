@@ -9,14 +9,10 @@ const port = 3000;
 
 app.use(express.json());
 app.use(cors());
+app.use("/images", express.static("../images"));
+
 
 app.use(express.static("../frontend"));
-app.use("/css", express.static("../frontend/css"));
-app.use("/script", express.static("../frontend/script"));
-app.use("/images", express.static("../frontend/images"));
-
-app.use(express.static("frontend"));
-app.use("/images", express.static("frontend/images"));
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false },
