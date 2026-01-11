@@ -19,6 +19,23 @@ async function fetchProfils(momentValue = "", villeValue = "") {
     const response = await fetch(url);
 
     if (!response.ok) {
+      if (response.status === 404) {
+        const fallbackResp = await fetch("/profils.json");
+        if (!fallbackResp.ok) {
+          throw new Error("Fallback failed: " + fallbackResp.status);
+        }
+
+        const fallback = await fallbackResp.json();
+        return fallback.map((p, i) => ({
+          id: p.id ?? i,
+          firstname: p.firstname,
+          img: p.imageUrl || p.img || "",
+          age: p.age,
+          city: p.city,
+          activity_name: p.type || p.job || ""
+        }));
+      }
+
       throw new Error("Erreur API : " + response.status);
     }
 
